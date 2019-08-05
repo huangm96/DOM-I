@@ -41,6 +41,13 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+const nav_new_one = document.createElement("a");
+nav_new_one.textContent='More';
+document.querySelector("nav").appendChild(nav_new_one);
+
+
+
+
 const nav_name = document.querySelectorAll('a');
 nav_name[0].textContent=siteContent.nav["nav-item-1"]; 
 nav_name[1].textContent=siteContent.nav["nav-item-2"]; 
@@ -48,8 +55,14 @@ nav_name[2].textContent=siteContent.nav["nav-item-3"];
 nav_name[3].textContent=siteContent.nav["nav-item-4"]; 
 nav_name[4].textContent=siteContent.nav["nav-item-5"]; 
 nav_name[5].textContent=siteContent.nav["nav-item-6"]; 
+nav_name.forEach(element => {
+  element.style.color = 'green';
+})
 
-
+const nav_new_two = document.createElement("a");
+nav_new_two.textContent="Home";
+document.querySelector("nav").prepend(nav_new_two);
+nav_new_two.style.color = 'green';
 
 const cta_h1 = document.querySelector('.cta-text h1');
 cta_h1.textContent=siteContent.cta.h1;
