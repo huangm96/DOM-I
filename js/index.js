@@ -39,4 +39,46 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+const nav_name = document.querySelectorAll('a');
+nav_name[0].textContent=siteContent.nav["nav-item-1"]; 
+nav_name[1].textContent=siteContent.nav["nav-item-2"]; 
+nav_name[2].textContent=siteContent.nav["nav-item-3"]; 
+nav_name[3].textContent=siteContent.nav["nav-item-4"]; 
+nav_name[4].textContent=siteContent.nav["nav-item-5"]; 
+nav_name[5].textContent=siteContent.nav["nav-item-6"]; 
+
+// const nav_1 = document.querySelector('a:first-child');
+// nav_1.textContent =siteContent.nav["nav-item-1"];
+// const nav_2 = document.querySelector('a:nth-child(2)');
+// nav_2.textContent =siteContent.nav["nav-item-2"];
+// const nav_3 = document.querySelector('a:nth-child(3)');
+// nav_3.textContent =siteContent.nav["nav-item-3"];
+// const nav_4 = document.querySelector('a:nth-child(4)');
+// nav_4.textContent =siteContent.nav["nav-item-4"];
+// const nav_5 = document.querySelector('a:nth-child(5)');
+// nav_5.textContent =siteContent.nav["nav-item-5"];
+// const nav_6 = document.querySelector('a:nth-child(6)');
+// nav_6.textContent =siteContent.nav["nav-item-6"];
+
+const cta_h1 = document.querySelector('.cta-text h1');
+cta_h1.textContent=siteContent.cta.h1;
+const cta_button = document.querySelector('.cta-text button');
+cta_button.textContent=siteContent.cta.button;
+
+const cta_img = document.getElementById("cta-img");
+cta_img.setAttribute('src', siteContent.cta["img-src"]);
+
+const feature_h4 = document.querySelector('.text-content:first-child h4');
+feature_h4.textContent = siteContent["main-content"]["features-h4"];
+const feature_p = document.querySelector('.text-content:first-child p');
+feature_p.textContent = siteContent["main-content"]["features-content"];
+const about_h4 = document.querySelector('.text-content:nth-child(2) h4');
+about_h4.textContent = siteContent["main-content"]["about-h4"];
+const about_p = document.querySelector('.text-content:nth-child(2) p');
+about_p.textContent = siteContent["main-content"]["about-content"];
+
+
+const services_h4 =document.querySelector('.text-content:nth-child(3) h4');
+services_h4 =siteContent["main-content"]["services-h4"];
