@@ -41,12 +41,10 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+/* Navigation*/
 const nav_new_one = document.createElement("a");
 nav_new_one.textContent='More';
 document.querySelector("nav").appendChild(nav_new_one);
-
-
-
 
 const nav_name = document.querySelectorAll('a');
 nav_name[0].textContent=siteContent.nav["nav-item-1"]; 
@@ -64,14 +62,20 @@ nav_new_two.textContent="Home";
 document.querySelector("nav").prepend(nav_new_two);
 nav_new_two.style.color = 'green';
 
+
+/*cta */
+var newString = siteContent.cta.h1.split(' ').join('\n');
 const cta_h1 = document.querySelector('.cta-text h1');
-cta_h1.textContent=siteContent.cta.h1;
+cta_h1.innerText=newString;
+
 const cta_button = document.querySelector('.cta-text button');
 cta_button.textContent=siteContent.cta.button;
 
 const cta_img = document.getElementById("cta-img");
 cta_img.setAttribute('src', siteContent.cta["img-src"]);
 
+
+/*main content */
 const feature_h4 = document.querySelector('.top-content .text-content:first-child h4');
 feature_h4.textContent = siteContent["main-content"]["features-h4"];
 const feature_p = document.querySelector('.top-content .text-content:first-child p');
@@ -97,12 +101,22 @@ vision_h4.textContent = siteContent["main-content"]["vision-h4"];
 const vision_p = document.querySelector('.bottom-content .text-content:nth-child(3) p');
 vision_p.textContent = siteContent["main-content"]["vision-content"];
 
+
+/* contact info*/
 const contact_h4 = document.querySelector('.contact h4');
 contact_h4.textContent= siteContent.contact["contact-h4"];
+
+var stringArray=siteContent.contact.address.split(' ');
+stringArray.splice(4,0,'\r\n');
+var newString = stringArray.join(' ');
+
 const contact_p = document.querySelectorAll('.contact p');
-contact_p[0].textContent = siteContent.contact.address;
+contact_p[0].innerText = newString;
 contact_p[1].textContent = siteContent.contact.phone;
 contact_p[2].textContent = siteContent.contact.email;
 
+
+
+/*footer */
 const footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
